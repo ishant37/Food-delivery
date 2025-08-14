@@ -1,0 +1,98 @@
+/* Header.css */
+
+.header {
+    height: 34vw;
+    margin: 50px 50px;
+    background: url('/header_img.png') no-repeat center center; /* Works if image is in public/ */
+    background-size: cover;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    animation: bgZoom 8s ease-in-out infinite alternate;
+}
+
+/* Background Zoom Animation */
+@keyframes bgZoom {
+    from { background-size: 100%; }
+    to { background-size: 105%; }
+}
+
+/* Overlay effect */
+.header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+
+/* Text content */
+.header-contents {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 40px;
+    margin-top: 18%;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+/* Fade-up animation for text */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header-contents h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.header-contents p {
+    font-size: 1vw;
+    color:white;
+
+    line-height: 1.4;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* Button styling */
+.header-contents button {
+    background-color: white;
+    color: #747474;
+    padding: 1vw 2.3vw;
+    border: none;
+    border-radius: 50px;
+    font-size: max(1vw,13px);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.header-contents button:hover {
+    background-color: #f2f2f2;
+    transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header {
+        height: 300px;
+        margin: 20px;
+    }
+
+    .header-contents h2 {
+        font-size: 1.8rem;
+    }
+
+    .header-contents p {
+        font-size: 0.9rem;
+    }
+}

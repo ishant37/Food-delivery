@@ -1,0 +1,115 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5%;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo styling */
+.logo {
+  height: 50px;
+  cursor: pointer;
+}
+
+/* Menu */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.navbar-menu li {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu li:hover {
+  color: #ff6600; /* Highlight color */
+}
+
+/* Right section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-right img {
+  height: 22px;
+  cursor: pointer;
+}
+
+
+.navbar-search-icon img {
+  height: 24px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  right: -4px;
+}
+
+/* Sign-in button */
+.navbar-right button {
+  border-radius: 20%;
+  color: grey;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  /* border-radius: 6px; */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-right button:hover {
+  background-color: rgb(109, 101, 101);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none; /* For mobile, you can later add a hamburger menu */
+  }
+
+  .navbar {
+    padding: 10px 4%;
+  }
+
+  .logo {
+    height: 40px;
+  }
+}
+
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+.navbar-search-icon{
+    position:relative;
+}
+
+.navbar-search-icon .dot{
+    position: absolute;
+    min-height: 10px;
+    min-width: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top:-8px;
+    right: -8px;
+}
