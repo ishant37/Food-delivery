@@ -1,23 +1,31 @@
-import { createContext } from "react";
+// components/Context/StoreContext.jsx
+import React, { createContext, useState } from "react";
+import { food_list } from "../../assets/assets"; // Import your existing array
 
-import { food_list } from "../../assets/assets";
+export const StoreContext = createContext();
 
-export const StoreContext=createContext(null)
+const StoreContextProvider = ({ children }) => {
+  const [cartItems, setCartItems] = useState({});
 
-const StoreContextProvider=(props)=>{
+  const addToCart = (id) => {
+    setCartItems((prev) => ({
+      ...prev,
+      [id]: (prev[id] || 0) + 1,
+    }));
+  };
 
+  const removeFromCart = (id) => {
+    setCartItems((prev) => ({
+      ...prev,
+      [id]: Math.max((prev[id] || 0) - 1, 0),
+    }));
+  };
 
-
-
-    const contextValue={
-        food_list
-    }
-
-    return(
-        <StoreContext.Provider value={contextValue} >
-            {props.children}
-        </StoreContext.Provider>
-    )
-}
+  return (
+    <StoreContext.Provider value={{ food_list, cartItems, addToCart, removeFromCart }}>
+      {children}
+    </StoreContext.Provider>
+  );
+};
 
 export default StoreContextProvider;

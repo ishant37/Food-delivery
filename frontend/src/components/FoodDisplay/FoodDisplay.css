@@ -1,0 +1,35 @@
+/* FoodDisplay.css */
+
+.food-display {
+  padding: 50px 5%;
+}
+
+.food-display h2 {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Food items grid */
+.food-display-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .food-display {
+    padding: 20px 4%;
+  }
+
+  .food-display h2 {
+    font-size: 1.5rem;
+  }
+
+  .food-display-list {
+    gap: 20px;
+  }
+}

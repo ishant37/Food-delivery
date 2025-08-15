@@ -1,0 +1,36 @@
+.food-item {
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 250px;
+  margin: 10px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+.food-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.food-item-controls {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.food-item-controls button {
+  background: #ff5722;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.food-item-controls span {
+  font-weight: bold;
+  font-size: 16px;
+}
