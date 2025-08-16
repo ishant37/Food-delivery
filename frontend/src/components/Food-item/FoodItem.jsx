@@ -1,29 +1,32 @@
-import React, { useContext } from "react";
-import { StoreContext } from "../Context/StoreContext";
+
+import React from 'react';
 import "./FoodItem.css";
+import { assets } from '../../assets/assets';
 
-const FoodItem = ({ id, name, description, price, image }) => {
-  const { cartItems, addToCart, removeFromCart } = useContext(StoreContext);
-  const quantity = cartItems[id] || 0;
-
+const FoodItem = ({ id, name, price, description, image, quantity, addToCart, removeFromCart }) => {
   return (
-    <div className="food-item">
-      <img src={image} alt={name} className="food-item-image" />
-
-      <h3>{name}</h3>
-      <p>{description}</p>
-      <p className="food-item-price">₹{price}</p>
-
-      <div className="food-item-controls">
-        {quantity === 0 ? (
-          <button onClick={() => addToCart(id)}>Add to Cart</button>
-        ) : (
-          <>
-            <button onClick={() => removeFromCart(id)}>-</button>
-            <span>{quantity}</span>
-            <button onClick={() => addToCart(id)}>+</button>
-          </>
-        )}
+    <div className='food-item'>
+      <div className="food-item-img-container">
+        <img className="food-item-image" src={image} alt={name} />
+        <div className="food-item-cart-controls">
+          {quantity > 0 ? (
+            <div className="cart-qty-controls">
+              <button className="cart-btn" onClick={removeFromCart}>-</button>
+              <span className="cart-qty">{quantity}</span>
+              <button className="cart-btn" onClick={addToCart}>+</button>
+            </div>
+          ) : (
+            <button className="add-to-cart-btn" onClick={addToCart}>+</button>
+          )}
+        </div>
+      </div>
+      <div className="food-item-info">
+        <div className="food-item-name-rating">
+          <p className="food-item-name">{name}</p>
+          <img className="food-item-rating" src={assets.rating_starts} alt="Rating" />
+        </div>
+        <p className="food-item-des">{description}</p>
+        <p className="food-item-price">₹{price}</p>
       </div>
     </div>
   );

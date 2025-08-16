@@ -3,6 +3,13 @@ import './Header.css';
 import { assets } from '../../assets/assets';
 
 const Header = () => {
+  const handleViewMenu = () => {
+    const menuSection = document.getElementById("menu-section");
+    if (menuSection) {
+      menuSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div
       className='header'
@@ -11,7 +18,7 @@ const Header = () => {
       <div className="header-contents">
         <h2>Order your favourite food here</h2>
         <p>Choose from a diverse menu featuring</p>
-        <button>View Menu</button>
+        <button onClick={handleViewMenu}>View Menu</button>
       </div>
     </div>
   );

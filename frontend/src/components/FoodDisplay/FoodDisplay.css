@@ -1,12 +1,12 @@
 /* FoodDisplay.css */
 
 .food-display {
-  padding: 50px 5%;
+  padding: 40px 5%;
 }
 
 .food-display h2 {
   font-size: 1.8rem;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   text-align: center;
   font-weight: 600;
 }
@@ -15,7 +15,7 @@
 .food-display-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 40px;
+  gap: 50px;
   justify-content: center;
 }
 
@@ -33,3 +33,4 @@
     gap: 20px;
   }
 }
+
