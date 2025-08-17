@@ -54,7 +54,7 @@
 }
 
 button {
-  background: #ff5722;
+  background: #49557e;
   color: white;
   padding: 10px;
   border: none;
@@ -62,10 +62,10 @@ button {
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
+  transition: background 0.3s;
 }
-
 button:hover {
-  background: #e64a19;
+  background: #2ecc71;
 }
 
 .login-popup-condition {

@@ -1,0 +1,90 @@
+.place-order {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin: 50px auto;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+.place-order-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.place-order-left .title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.place-order-left input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.place-order-left input:focus {
+  border: 1px solid #ff4d30;
+}
+
+.multi-fields {
+  display: flex;
+  gap: 15px;
+}
+
+.place-order-right {
+  flex: 0.7;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  height: fit-content;
+}
+
+.cart-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart-total {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.cart-total-details b {
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  margin-top: 15px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff4d30;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #e04328;
+}

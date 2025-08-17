@@ -3,8 +3,8 @@
   background: #2ecc71;
   color: #fff;
   border-radius: 16px;
-  padding: 7px 18px;
-  font-weight: 600;
+  padding: 2px 1px;
+  font-weight: 400;
   margin-left: 8px;
   font-size: 1rem;
 }
@@ -44,7 +44,7 @@
 
 /* Logo styling */
 .logo {
-  height: 50px;
+  height: 100px;
   cursor: pointer;
 }
 
@@ -57,7 +57,7 @@
 
 .navbar-menu li {
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   color: #333;
   transition: color 0.3s ease;
@@ -71,7 +71,7 @@
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .navbar-right img {
@@ -96,19 +96,17 @@
 
 /* Sign-in button */
 .navbar-right button {
-  border-radius: 20%;
-  color: grey;
+  border-radius: 20px;
+  color: #fff;
+  background: #49557e;
   padding: 8px 18px;
   font-size: 14px;
   font-weight: 500;
-  /* border-radius: 6px; */
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s;
+  border: none;
 }
 
-.navbar-right button:hover {
-  background-color: rgb(109, 101, 101);
-}
 
 /* Responsive */
 @media (max-width: 768px) {

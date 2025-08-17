@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Brand */}
         <div className="footer-brand">
           <h2>Apni Dukan</h2>
-          <p>Your favorite food delivered fresh at your door.</p>
+          <p>Your favorite food delivered fresh at your door. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi expedita et, quos sed recusandae voluptatem autem, reprehenderit nihil ipsa vitae minus inventore quis cumque eligendi debitis iure libero nostrum rerum?</p>
         </div>
 
         {/* Quick Links */}
