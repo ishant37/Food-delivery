@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Cart from './Pages/Cart/Cart';
 import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
+import Kitchen from './components/Kitchen-items/Kitchen';
 import './App.css';
 import LoginPopup from './components/LoginPagePopUp/LoginPopup';
 
@@ -20,6 +21,7 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/order' element={<PlaceOrder />} />
+          <Route path='/kitchen' element={<Kitchen />} />
         </Routes>
       </div>
     </>

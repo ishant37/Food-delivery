@@ -1,6 +1,7 @@
+
 import React from 'react';
-import "./FoodItem.css";
-import { assets } from '../../assets/assets';
+// import "./FoodItem.css";
+// import { assets } from '../../assets/assets';
 
 const FoodItem = ({ id, name, price, description, image, quantity, addToCart, removeFromCart }) => {
   return (
@@ -22,7 +23,7 @@ const FoodItem = ({ id, name, price, description, image, quantity, addToCart, re
       <div className="food-item-info">
         <div className="food-item-name-rating">
           <p className="food-item-name">{name}</p>
-          <img className="food-item-rating" src={assets.rating_starts} alt="Rating" />
+          {/* <img className="food-item-rating" src={assets.rating_starts} alt="Rating" /> */}
         </div>
         <p className="food-item-des">{description}</p>
         <p className="food-item-price">₹{price}</p>

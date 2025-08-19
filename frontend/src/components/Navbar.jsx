@@ -15,7 +15,7 @@ const Navbar = ({ setshowLogin, userImg }) => {
       <ul className="navbar-menu">
         <li onClick={() => { setmenu("home"); navigate('/'); }} className={menu === 'home' ? 'active' : ''}>Home</li>
         <li onClick={() => setmenu("menu")} className={menu === 'menu' ? 'active' : ''}>Menu</li>
-        <li onClick={() => setmenu("mobile-app")} className={menu === 'mobile-app' ? 'active' : ''}>Mobile-app</li>
+        <li onClick={() => { setmenu("home"); navigate('/kitchen'); }} className={menu === 'kitchen' ? 'active' : ''}>Kitchen items</li>
         <li onClick={() => setmenu("contact-us")} className={menu === 'contact-us' ? 'active' : ''}>Contact-us</li>
       </ul>
       <div className="navbar-right">
