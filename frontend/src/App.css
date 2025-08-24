@@ -9,11 +9,23 @@
   font-style: normal;
 }
 
-body{
-  min-height: 100vh;
+/* Make sure body doesn’t override with white bg */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: transparent;
 }
+
 
 a{
   text-decoration: none;
   color: inherit;
 }
+.navbar {
+  background: rgba(255, 255, 255, 0.7); /* thoda transparent */
+  backdrop-filter: blur(8px);            /* glass effect */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
