@@ -115,8 +115,8 @@
 /* Sign-in Button */
 .navbar-right button {
   border-radius: 25px;
-  color: #fff;
-  background: #353e5c;
+  color: #0c0909;
+  background: #eaebee;
   padding: 0.6rem 1.2rem;
   font-size: 0.9rem;
   font-weight: 600;
@@ -126,7 +126,7 @@
 }
 
 .navbar-right button:hover {
-  background: #ff6600;
+  background: #634532;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 

@@ -1,0 +1,120 @@
+/* --- General Page Styling --- */
+.cuisines-page {
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 40px 20px;
+  /* background-color: #f8f8f8; */
+}
+
+.cuisines-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cuisines-header h1 {
+  font-size: 3em;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.cuisines-header p {
+  font-size: 1.2em;
+  color: #777;
+}
+
+/* --- Content Layout --- */
+.cuisines-content {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.cuisine-list {
+  flex: 1;
+  min-width: 300px; /* Ensure columns don't get too narrow */
+}
+
+.cuisine-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.cuisine-icon {
+  font-size: 3em;
+  color: #e62e05; /* Red accent color */
+  margin-right: 20px;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.cuisine-text h3 {
+  font-size: 1.3em;
+  color: #e62e05; /* Red accent for titles */
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.cuisine-text p {
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.6;
+}
+
+.central-image {
+  flex-shrink: 0; /* Prevent image from shrinking */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px; /* Add some horizontal margin */
+}
+
+.central-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Slight rounded corners for the image */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .cuisines-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cuisine-list {
+    min-width: unset;
+    width: 100%;
+    max-width: 600px; /* Constrain width on smaller screens */
+  }
+
+  .central-image {
+    order: -1; /* Place image above text columns on smaller screens */
+    margin-bottom: 40px;
+  }
+
+  .cuisines-header h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  .cuisines-header h1 {
+    font-size: 2em;
+  }
+
+  .cuisine-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cuisine-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}

@@ -1,13 +1,13 @@
 .food-item {
   width: 250px;
-  background: #ffffff;
+  background: transparent;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeIn 0.8s ease forwards;
   position: relative; /* Essential for positioning the 'add-to-cart-btn' */
-  border: 1px solid #f0f0f0;
+  border: 1px solid #5e5858;
 }
 
 .food-item:hover {
