@@ -1,68 +1,160 @@
-.footer {
-  background: #222;
-  color: #fff;
-  padding: 40px 20px 20px;
-  font-family: Arial, sans-serif;
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.footer h2, .footer h4 {
-  margin-bottom: 10px;
-}
-
-.footer p {
+/* --- General Footer Styles --- */
+.site-footer {
+  background-color: #1a1a1a; /* Dark background color */
+  background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png'); /* Subtle texture */
+  color: #a7a7a7;
+  padding-top: 80px; /* Space for the torn edge effect */
+  padding-bottom: 20px;
   font-size: 14px;
+  position: relative;
   line-height: 1.6;
 }
 
-.footer-links ul {
+/* --- Torn Edge Effect --- */
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: -1px; /* Position it at the very top */
+  left: 0;
+  width: 100%;
+  height: 80px; /* Height of the torn edge effect */
+  background-image: url('https://i.imgur.com/JJb2sF1.png'); /* This is a sample torn paper PNG */
+  background-repeat: repeat-x;
+  background-size: cover;
+  transform: translateY(-100%); /* Move it up to sit on top */
+  pointer-events: none; /* Allows clicking through the pseudo-element */
+}
+
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Layout Grids --- */
+.footer-top, .footer-middle {
+  display: grid;
+  gap: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-top {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 4 columns on large screens */
+}
+
+.footer-middle {
+  border-bottom: 1px solid #333;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2 columns on large screens */
+}
+
+/* --- Section & Content Styles --- */
+.footer-section h4 {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.footer-section ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.footer-links ul li {
-  margin-bottom: 8px;
+.footer-section ul li {
+  margin-bottom: 10px;
 }
 
-.footer-links ul li a {
-  color: #ccc;
+.footer-section ul a {
+  color: #a7a7a7;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
-.footer-links ul li a:hover {
-  color: #ff9800;
+.footer-section ul a:hover {
+  color: #ffffff;
 }
 
-.footer-contact p {
-  font-size: 14px;
+.contact-info li {
+  display: flex;
+  align-items: flex-start;
 }
 
+.contact-info .icon {
+  margin-right: 12px;
+  font-size: 16px;
+  color: #fff;
+  flex-shrink: 0; /* Prevents icon from shrinking */
+  margin-top: 4px;
+}
+
+/* --- Social Icons and App Badges --- */
+.social-icons a {
+  color: #ffffff;
+  font-size: 16px;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #cccccc;
+}
+
+.app-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.app-badges img {
+  height: 40px;
+  cursor: pointer;
+}
+
+/* --- Bottom Bar --- */
 .footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 13px;
-  border-top: 1px solid #444;
-  padding-top: 15px;
-  color: #bbb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
-/* Responsive */
+.payment-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-icons img {
+  height: 24px;
+}
+
+.scroll-to-top {
+  background-color: #e62e05; /* Accent color from image */
+  color: #ffffff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #c42603;
+}
+
+/* --- Responsive Design --- */
 @media (max-width: 768px) {
-  .footer-container {
+  .footer-bottom {
     flex-direction: column;
     text-align: center;
   }
-}
-
-.footer-brand{
-  width: 30rem;
 }

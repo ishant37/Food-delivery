@@ -3,7 +3,7 @@ import './Home.css'
 import Header from '../../components/Header/Header'
 import ExploreMenu from '../../components/ExploreMenu/ExploreMenu'
 import FoodDisplay from '../../components/FoodDisplay/FoodDisplay'
-import AppDownlode from '../../components/AppDownlode/AppDownlode'
+// import AppDownlode from '../../components/AppDownlode/AppDownlode'
 import Footer from '../../components/Footer/Footer'
 const Home = () => {
 
@@ -13,7 +13,7 @@ const Home = () => {
       <Header/>
       <ExploreMenu  catagory={catagory} setcatagory={setcatagory}  />
       <FoodDisplay catagory={catagory}/>
-      <AppDownlode/>
+      {/* <AppDownlode/> */}
       <Footer/>
     </div>
   )
