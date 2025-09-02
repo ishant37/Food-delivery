@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
+import AdminLogin from './Pages/AdminLogin.jsx';
+import AdminDashboard from './Pages/AdminDashboard.jsx';
 import Cart from './Pages/Cart/Cart';
 import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
 import Kitchen from './components/Kitchen-items/Kitchen';
@@ -48,10 +50,12 @@ const App = () => {
       <div className="app" style={{ position: 'relative', zIndex: 1 }}>
         <Navbar setshowLogin={setshowLogin} userImg={userImg} />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/order" element={<PlaceOrder />} />
-          <Route path="/home" element={<Kitchen />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/order' element={<PlaceOrder />} />
+          <Route path='/kitchen' element={<Kitchen />} />
+          <Route path='/admin' element={<AdminLogin onLogin={() => window.location.href='/admin/dashboard'} />} />
+          <Route path='/admin/dashboard' element={<AdminDashboard />} />
         </Routes>
       </div>
     </>
